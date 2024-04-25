@@ -48,17 +48,3 @@ class Controlador:
             Vista_Opciones.mostrar_mensaje("[PRODUCTO ELIMINADO]")
         else:
             Vista_Opciones.mostrar_mensaje("[PRODUCTO NO ENCONTRADO.]")
-
-    def iniciar_chat(self):
-            Vista_Opciones.iniciar_chat()
-            mensajes = [
-                {"role": "system", "content": "You are a helpful assistant."},
-            ]
-            while True:
-                entrada_usuario =  Vista_Opciones.obtener_entrada_usuario()
-                if entrada_usuario.lower() == 'salir':
-                    break
-                mensajes.append({"role": "user", "content": entrada_usuario})
-                respuesta = self.chat.generar_respuesta(mensajes)
-                Vista_Opciones.mostrar_respuesta(respuesta)
-                mensajes.append({"role": "assistant", "content": respuesta})
