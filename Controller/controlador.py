@@ -48,3 +48,5 @@ class Controlador:
             Vista_Opciones.mostrar_mensaje("[PRODUCTO ELIMINADO]")
         else:
             Vista_Opciones.mostrar_mensaje("[PRODUCTO NO ENCONTRADO.]")
+    def iniciar_chat(self):
+        Vista_Opciones.mostrar_mensaje("¡Estamos trabajando en una nueva función! ¡Pronto estará disponible!")
